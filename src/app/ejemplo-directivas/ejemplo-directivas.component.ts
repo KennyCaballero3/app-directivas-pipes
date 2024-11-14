@@ -8,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrl: './ejemplo-directivas.component.css'
 })
 export class EjemploDirectivasComponent {
+  mostrarAlumnos = false;
+  mostrarCursos = false;
 
+  verAlumnos(): void {
+    this.mostrarAlumnos = true;
+  }
+
+  verCursos(): void {
+    this.mostrarCursos = true;
+  }
 }
