@@ -1,7 +1,33 @@
 <button type="button" class="btn btn-primary">Visualizar Alumnos</button>
 <button type="button" class="btn btn-secondary">Visualizar Cursos</button>
 <hr />
-<table class="table">
+@if(mostrarAlumnos){
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (alumno of alumnosLista; track $index) {
+        <tr>
+          <th scope="row">{{alumno.id}}</th>
+          <td>{{alumno.nombre}}</td>
+          <td>{{alumno.apellido}}</td>
+          <td>mdo</td>
+        </tr>
+      }
+      
+    </tbody>
+  </table>
+}
+
+
+@if(mostrarCursos){
+  <table class="table">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -30,3 +56,4 @@
       </tr>
     </tbody>
   </table>
+}
